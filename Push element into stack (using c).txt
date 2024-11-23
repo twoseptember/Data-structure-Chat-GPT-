@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 100  // Corrected macro name
+
+int stack[MAX_SIZE];  // Corrected macro usage
+int top = -1;
+
+void push(int element) {  // Fixed function name from 'pust' to 'push'
+    if (top >= MAX_SIZE - 1) {  // Fixed condition syntax 'top > = MAX_SIZE -1' to 'top >= MAX_SIZE - 1'
+        printf("Stack overflow\n");
+        return;
+    }
+    stack[++top] = element;  // Push the element onto the stack
+    printf("%d pushed to stack\n", element);  // Print confirmation
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+    return 0;
+}

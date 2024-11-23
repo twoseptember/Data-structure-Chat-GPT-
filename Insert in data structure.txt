@@ -1,0 +1,17 @@
+#include <stdio.h>
+// Removed <conio.h>, as it's not supported in most modern compilers
+
+int main() {
+    int a[10], i;  // Fixed declaration and added missing `int` type for `i`
+
+    for (i = 0; i < 10; i++) {
+        printf("Enter number: ");  // Corrected 'Printf' to 'printf'
+        scanf("%d", &a[i]);  // Fixed 'Sat门' to '&a[i]'
+    }
+
+    for (i = 0; i < 10; i++) {  // Fixed loop syntax: replaced '(' with '{'
+        printf("Element %d: %d\n", i + 1, a[i]);  // Corrected 'Printf' to 'printf' and fixed format
+    }
+
+    return 0;
+}
