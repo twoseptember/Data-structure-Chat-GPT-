@@ -1,36 +1,36 @@
 #include <stdio.h>
-// Removed conio.h, as it's not needed in most modern compilers
+
 
 int main() {
-    int n, i, position;  // Fixed missing semicolon and corrected variable names
+    int n, i, position;  
     int array[100];
 
-    printf("Enter size:");  // Corrected 'Printf' to 'printf'
-    scanf("%d", &n);  // Corrected 'Scanf' to 'scanf'
+    printf("Enter size:");  
+    scanf("%d", &n);  
 
-    for (i = 0; i < n; i++) {  // Fixed syntax error in the 'for' loop
-        printf("Enter element %d: ", i + 1);  // Corrected 'Printf' to 'printf' and adjusted the prompt
+    for (i = 0; i < n; i++) {  
+        printf("Enter element %d: ", i + 1);  
         scanf("%d", &array[i]);
     }
 
-    printf("Enter Position %d: ", n);  // Fixed 'Printf' to 'printf' and corrected the format string
+    printf("Enter Position %d: ", n);  
     scanf("%d", &position);
 
-    // Corrected the condition to check if the position is invalid
+   
     if (position < 1 || position > n) {
-        printf("Invalid Position!\n");  // Corrected 'Printf' to 'printf'
+        printf("Invalid Position!\n");  
     } else {
-        // Corrected the loop for shifting elements
+        
         for (i = position - 1; i < n - 1; i++) {
             array[i] = array[i + 1];
         }
-        n--;  // Decrement n to reflect the deletion
+        n--;  
 
-        printf("Array after deletion: ");  // Corrected 'Printf' to 'printf'
-        for (i = 0; i < n; i++) {  // Loop to print the array after deletion
-            printf("%d ", array[i]);  // Corrected 'Printf' to 'printf'
+        printf("Array after deletion: ");  
+        for (i = 0; i < n; i++) {  
+            printf("%d ", array[i]);  
         }
-        printf("\n");  // Corrected 'Printf' to 'printf'
+        printf("\n");  
     }
 
     return 0;
