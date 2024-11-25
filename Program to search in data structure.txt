@@ -1,29 +1,29 @@
 #include <stdio.h>
-// Removed <conio.h> as it is not necessary in modern compilers
+
 
 int main() {
-    int array[100], i, n, value, found = 0;  // Added `found` for better control of search output
+    int array[100], i, n, value, found = 0;  
 
-    printf("Enter size of array: ");  // Fixed 'Printf' to 'printf' and corrected string
+    printf("Enter size of array: ");  
     scanf("%d", &n);
 
-    printf("Enter elements:\n");  // Fixed 'Printf' to 'printf'
-    for (i = 0; i < n; i++) {  // Fixed loop condition
+    printf("Enter elements:\n");  
+    for (i = 0; i < n; i++) {  
         scanf("%d", &array[i]);
     }
 
-    printf("Enter the value to be searched: ");  // Fixed 'Printf' to 'printf' and corrected string
-    scanf("%d", &value);  // Fixed 'Scanf' to 'scanf'
+    printf("Enter the value to be searched: ");  
+    scanf("%d", &value);  
 
-    for (i = 0; i < n; i++) {  // Fixed loop condition (should be `< n` not `<= n`)
+    for (i = 0; i < n; i++) {  
         if (array[i] == value) {
-            printf("Value found at index %d\n", i);  // Fixed 'Printf' to 'printf'
-            found = 1;  // Set `found` to true
-            break;  // Exit loop after finding the value
+            printf("Value found at index %d\n", i);  
+            found = 1;  
+            break;  
         }
     }
 
-    if (!found) {  // Check if value was not found
+    if (!found) {  
         printf("Value not found\n");
     }
 
